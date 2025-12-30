@@ -5,10 +5,11 @@ import it from './locales/it.json';
 import fr from './locales/fr.json';
 import de from './locales/de.json';
 import ptBR from './locales/pt-BR.json';
+import nb from './locales/nb.json';
 import { detectBrowserLanguageCodes } from './helpers/subtitles/languages.ts';
 
 export const availableLocales: Record<string, boolean> = {
-  'en': true, 'nl': true, 'it': true, 'fr': true, 'de': true, 'pt-BR': true,
+  'en': true, 'nl': true, 'it': true, 'fr': true, 'de': true, 'pt-BR': true, 'nb': true,
 } as const;
 
 type MessageSchema = typeof en;
@@ -34,5 +35,6 @@ export const i18n: I18n = createI18n<[MessageSchema], Locale>({
     fr,
     de,
     'pt-BR': ptBR,
+    nb,
   },
 });
